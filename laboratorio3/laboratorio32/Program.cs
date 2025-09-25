@@ -1,21 +1,30 @@
 ﻿internal class Program
 {
+    public class CalculosMatematicos
+    {
+        public const double PI = Math.PI;
+        public int Resultado(int numero1, int numero2)
+        {
+            return (numero1 + numero2) * (numero1 - numero2);
+        }
+        public double AreaC(double r)
+        {
+            return PI * Math.Pow(r, 2);
+        }
+        public double PerimetroR(double l, double a)
+        {
+            return 2 * (l + a);
+        }
+    }
     private static void Main(string[] args)
     {
-        int primerNumero, segundoNumero;
-        Console.WriteLine("Ingrese el primer numero");
-        primerNumero = Convert.ToInt32(Console.ReadLine());
+        double radio;
 
-        Console.WriteLine("Ingrese el segundo numero");
-        segundoNumero = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("ingrese el radio de su circulo para saber el area: ");
+        radio = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine(CalculosMatematicos.Calculo(primerNumero,segundoNumero));
-    }
-}
-public class CalculosMatematicos{
-    
-    public int Calculo(int a, int b){
-        int Resultado = (a + b)*(a - b);
-        return Resultado;
+        CalculosMatematicos calmat = new CalculosMatematicos();
+        double resultado = calmat.AreaC(radio);
+        Console.WriteLine($"El area del circulo con radio de {radio} es: {resultado} ");
     }
 }

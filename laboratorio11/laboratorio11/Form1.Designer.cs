@@ -30,6 +30,7 @@
         {
             btnClickThis = new Button();
             lblHelloWorld = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btnClickThis
@@ -53,11 +54,20 @@
             lblHelloWorld.Text = "Label1";
             lblHelloWorld.Click += label1_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(127, 221);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 20);
+            label1.TabIndex = 2;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1208, 600);
+            Controls.Add(label1);
             Controls.Add(lblHelloWorld);
             Controls.Add(btnClickThis);
             Margin = new Padding(3, 4, 3, 4);
@@ -72,5 +82,6 @@
 
         private Button btnClickThis;
         private Label lblHelloWorld;
+        private Label label1;
     }
 }
